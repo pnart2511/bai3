@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -9,8 +10,8 @@
 </head>
 <body>
     <div>
-        <h1 style="color: Red; text-align: center;">
-            NAM CAN THO
+        <h1 style="color: rgb(204, 0, 255); text-align: center;">
+           SHOP ĐIỆN THOẠI
         </h1>
         
 
@@ -23,17 +24,59 @@
         .tieude{
             color:red;
             font-weight: bold;
+            text-align: center;
+            
         }  
         .sanpham{
             font-family: 'Times New Roman', Times, serif;
+            display: inline ;
         }
         .sanphamold{
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
+            display: inline ;
         }
         .sanphambanchay{
             text-decoration: underline;
+           
         }
+        .gia{
+            color: aqua;
+
+        }
+        .tensanpham{
+            text-align: center;
+            
+            
+        }
+        ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+}
+
+    li a:hover {
+        background-color: #111111;
+    }
+.chantrang{
+ color:blueviolet;
+ text-align: center;
+
+}
 
 
     </style>
@@ -41,19 +84,79 @@
         <h2>Home</h2>
         <h2>Tra cuu</h2>
         <h2>Tin Tuc</h2>
+        <ul>
+            <li><a href="https://www.apple.com/vn/iphone-15-pro/">Iphone</a></li>
+            <li><a href="https://www.samsung.com/vn/smartphones/galaxy-s24/">Andorid</a></li>
+            <li><a href="https://www.asus.com/vn/">PC</a></li>
+            <li><a href="https://youtube.com/">Laptop</a></li>
+          </ul>
+
         <button class ="dangki">Đăng Kí</button>
         <button class ="dangnhap">Đăng nhập</button>
-
+       
     </div>
-    <div style="float:none">
+   
+    <div style="float:left">
         <h2 class = "tieude">Trang web bán điện thoại</h2>
             <h4 class="sanpham">Điện Thoại Mới</h4>
             <h4 class = "sanphamold">Điện thoại đã qua sử dụng</h4>
-            <h4 class = "sanphambanchay">Điện Thoại Bán Chạy</h4>
-    </div>
-    <div >
-      <img class="dienthoai" src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1349547788.jpeg" alt="ip15" >
+            <h4 class = "sanphambanchay">Điện Thoại Bán Chạy</h4>  
+            <div style="float:left ; width: 1200px; height: 700px; background-color: red;" >
+                <div class="trungbay">
 
+                    <img class="img-ip" src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1349547788.jpeg" alt="iphone-15-pro">
+                    <button class="mua" id="buy">Mua Ngay</button>
+                    <button class="mua" id="them">Giõ hàng</button>
+                    <p class ="gia" style="color:black">Giá:30.000.000 VNĐ</p>
+                    <i class="fa fa-heart" style="margin-left:30px; float:left ; color:red" > Yêu Thích</i>
+                    <p class="tonkho" style="margin-left:30px; font-family: 'Times New Roman', Times, serif ;text-align: center;">Tồn Kho:2.000SP</p>
+                    
+                  
+
+
+                </div>
+                <div class="trungbay">
+
+                    <img class="img-ip" src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1349547788.jpeg" alt="iphone-15-pro">
+                    <button class="mua" id="buy">Mua Ngay</button>
+                    <button class="mua" id="them">Giõ hàng</button>
+                    <p class ="gia" style="color:black">Giá:30.000.000 VNĐ</p>
+                    
+                    <i class="fa fa-heart" style="margin-left:30px; float:left ; color:red" > Yêu Thích</i>
+                    <p class="tonkho" style="margin-left:30px; font-family: 'Times New Roman', Times, serif ;text-align: center;">Tồn Kho:2.000SP</p>
+
+
+                </div>
+                <div class="trungbay">
+
+                    <img class="img-ip" src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1349547788.jpeg" alt="iphone-15-pro">
+                    <button class="mua" id="buy">Mua Ngay</button>
+                    <button class="mua" id="them">Giõ hàng</button>
+                    <p class ="gia" style="color:black">Giá:30.000.000 VNĐ</p>
+                    
+                    <i class="fa fa-heart" style="margin-left:30px; float:left ; color:red" > Yêu Thích</i>
+                    <p class="tonkho" style="margin-left:30px; font-family: 'Times New Roman', Times, serif ;text-align: center;">Tồn Kho:2.000SP</p>
+
+                </div>
+                <div class="trungbay">
+
+                    <img class="img-ip" src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1349547788.jpeg" alt="iphone-15-pro">
+                    <button class="mua" id="buy">Mua Ngay</button>
+                    <button class="mua" id="them">Giõ hàng</button>
+                    <p class ="gia" style="color:black">Giá:30.000.000 VNĐ</p>
+                    
+                    <i class="fa fa-heart" style="margin-left:30px; float:left ; color:red" > Yêu Thích</i>
+                    <p class="tonkho" style="margin-left:30px; font-family: 'Times New Roman', Times, serif ;text-align: center;">Tồn Kho:2.000SP</p>
+
+                </div>
+               
+        
+
+            </div> 
+                  
     </div>
+    
+   
 </body>
+
 </html>
