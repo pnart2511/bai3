@@ -42,12 +42,31 @@ function getDateTime()
 }
 
 setInterval(getDateTime,1000);
+setInterval(chay,10000);
+var i = 600;
+function chay()
+{
+  var div = document.getElementById('divGet');
+  i-= 1;
+  div.innerHTML = i ;
+ 
+  if(i==0)
+  {
+    i=600;
+
+  }
+
+
+
+
+}
 </script>
 <body>
   
-    <div  id = '1' style="color: red; height: 50px ; width: 500px; background-color: black; text-align: center; border-radius: 40px; font-size: 40px;  ">
+    <div style="position:absolute; left:200px ; width: 800px; height:50px; background-color: beige;">
     
-            <label id = 'divGet' style="color: red; margin-top: 30px; " for=""></label>
+            <label id = 'divGet' style="color:currentColor;" for="">
+            </label>
     
     </div>
 </body>
