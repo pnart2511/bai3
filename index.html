@@ -2,72 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOP - 3wd</title>
+    <title>Chạy chữ ngang màn hình</title>
+    <style>
+        #divGet {
+            position: absolute;
+            white-space: nowrap; /* Ngăn chữ xuống dòng */
+            overflow: hidden; /* Ẩn phần chữ bên ngoài khung */
+            font-size: 24px;
+            animation: runText 10s linear infinite; /* Chạy animation với thời gian 10s */
+        }
+
+        @keyframes runText {
+            from { left: 100%; } /* Bắt đầu từ vị trí bên phải */
+            to { left: -100%; } /* Kết thúc ở vị trí bên trái */
+        }
+    </style>
 </head>
-<script lang="javascript">
-function getDateTime()
-{
-    var now = new Date;
-    var year = now.getFullYear();
-    var month = now.getMonth() + 1;
-    var days = now.getDate();
-    var hour = now.getHours();
-    var phut = now.getMinutes();
-    var giay = now.getSeconds();
-    
-    if(month.toString().length == 1)
-    {
-        month = '0' + month;
-    }
-    if(days.toString().length == 1)
-    {
-        days = '0' + days;
-    }
-    if(phut.toString().length == 1)
-    {
-        phut = '0' + phut;
-    }
-    if(giay.toString().length == 1)
-    {
-        giay = '0' + giay;
-    }
-    if(hour.toString().length == 1)
-    {
-        hour = '0' + hour;
-    }
-    var dateTime = hour + ':' + phut + ':' + giay + '- Ngày' + days + '/' + month + '/' + year;
-    document.getElementById('divGet').innerHTML = dateTime;
-}
-
-setInterval(getDateTime,1000);
-setInterval(chay,10000);
-var i = 600;
-function chay()
-{
-  var div = document.getElementById('divGet');
-  i-= 1;
-  div.innerHTML = i ;
- 
-  if(i==0)
-  {
-    i=600;
-
-  }
-
-
-
-
-}
-</script>
 <body>
-  
-    <div style="position:absolute; left:200px ; width: 800px; height:50px; background-color: beige;">
-    
-            <label id = 'divGet' style="color:currentColor;" for="">
-            </label>
-    
-    </div>
+    <div id="divGet">Chữ chạy ngang màn hình</div>
+
+    <script>
+        function getDateTime() {
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+
+            // Đảm bảo rằng giờ, phút và giây luôn có 2 chữ số
+            hour = hour < 10 ? '0' + hour : hour;
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+
+            var dateTime = hour + ':' + minute + ':' + second;
+            document.getElementById('divGet').innerHTML = dateTime;
+        }
+        
+        // Gọi hàm getDateTime mỗi giây
+        setInterval(getDateTime, 1000);
+    </script>
 </body>
 </html>
