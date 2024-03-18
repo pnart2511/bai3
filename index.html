@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web</title>
+    <title>SHOP - 3wd</title>
 </head>
+<script lang="javascript">
+function getDateTime()
+{
+    var now = new Date;
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;
+    var days = now.getDate();
+    var hour = now.getHours();
+    var phut = now.getMinutes();
+    var giay = now.getSeconds();
+    
+    if(month.toString().length == 1)
+    {
+        month = '0' + month;
+    }
+    if(days.toString().length == 1)
+    {
+        days = '0' + days;
+    }
+    if(phut.toString().length == 1)
+    {
+        phut = '0' + phut;
+    }
+    if(giay.toString().length == 1)
+    {
+        giay = '0' + giay;
+    }
+    if(hour.toString().length == 1)
+    {
+        hour = '0' + hour;
+    }
+    var dateTime = hour + ':' + phut + ':' + giay + '- Ngày' + days + '/' + month + '/' + year;
+    document.getElementById('divGet').innerHTML = dateTime;
+}
+
+setInterval(getDateTime,1000);
+</script>
 <body>
-    <div class="banner" style="background-color: burlywood; width: auto; height: 150px; background-image:url(https://www.eventbuilder.rocks/hs-fs/hubfs/image-png-Mar-31-2022-09-16-32-87-PM.png?width=800&name=image-png-Mar-31-2022-09-16-32-87-PM.png)">
-        <img class="img-banner"  style="width: 150px ; height: auto;" src="https://image.freepik.com/free-vector/letter-m-logo-colorful_125964-206.jpg" alt="logo">
-    </div>
-
-    <div style="text-align: center;">
-        <div class="menu"><a href="#">Trang Chủ</a></div>
-        <div class="menu"><a href="#">Sản Phẩm</a></div>
-        <div class="menu"><a href="#">Tin Tức</a></div>
-        <div class="menu"><a href="#">Liên Hệ</a></div>
-    </div>
-
-    <div style="display:block; width: 100%; height: 100%; float: left;">
-        <div style="height: auto; width: 500PX;">
-            <div class="sanpham">
-                <h1 class="tieude">Sản phẩm Hot</h1>
-                <div class="sp" style="height: auto; width: 1500px ; background-color: aqua;">
-                    <div class="trungbay">
-                        <img class="img-ip" src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1349547788.jpeg" alt="iphone-15-pro">
-                        <button class="mua">Mua Ngay</button>
-                        <button class="mua">Giỏ hàng</button>
-                        <p class="gia" style="color:black">Giá:30.000.000 VNĐ</p>
-                        <i class="fa fa-heart" style="margin-left:30px; float:left ; color:red"> Yêu Thích</i>
-                        <p class="tonkho" style="margin-left:30px; font-family: 'Times New Roman', Times, serif; text-align: center;">Tồn Kho:2.000SP</p>
-                    </div>
-                </div>
-            </div>
-            <h1 class="tieude">Hàng Mới</h1>
-            <div class="hangmoi">
-                <div class="trungbay">
-                    <img class="img-ip" src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1349547788.jpeg" alt="iphone-15-pro">
-                    <button class="mua">Mua Ngay</button>
-                    <button class="mua">Giỏ hàng</button>
-                    <p class="gia" style="color:black">Giá:30.000.000 VNĐ</p>
-                    <i class="fa fa-heart" style="margin-left:30px; float:left ; color:red"> Yêu Thích</i>
-                    <p class="tonkho" style="margin-left:30px; font-family: 'Times New Roman', Times, serif; text-align: center;">Tồn Kho:2.000SP</p>
-                </div>
-            </div>
-        </div>
+  
+    <div  id = '1' style="color: red; height: 50px ; width: 500px; background-color: black; text-align: center; border-radius: 40px; font-size: 40px;  ">
+    
+            <label id = 'divGet' style="color: red; margin-top: 30px; " for=""></label>
+    
     </div>
 </body>
 </html>
